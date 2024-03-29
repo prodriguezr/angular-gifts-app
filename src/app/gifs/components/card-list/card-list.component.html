@@ -1,16 +1,5 @@
 <div class="row">
-  @for (item of gifs; track $index) {
-  <div class="col-md-3 col-sm-6">
-    <div class="card mb-2 text-center bg-dark">
-      <img
-        [src]="item.images.downsized_medium.url"
-        [alt]="item.title"
-        class="card-img-top"
-      />
-      <div class="card-body text-white">
-        <p class="card-text">{{ item.title }}</p>
-      </div>
-    </div>
-  </div>
+  @for (gif of gifs; track $index) {
+  <gifs-card [gif]="gif" class="col-md-3 col-sm-6" />
   }
 </div>
